@@ -1,15 +1,15 @@
 FROM ubuntu:20.10 as base
 
 # MongoDB download URL
-ARG DB_URL=https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1804-4.2.15.tgz
+ARG DB_URL=https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu2004-4.4.8.tgz
 
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y curl && \
     curl -OL ${DB_URL} && \
-    tar -zxvf mongodb-linux-x86_64-ubuntu1804-4.2.15.tgz && \
-    mv ./mongodb-linux-x86_64-ubuntu1804-4.2.15/bin/* /usr/local/bin/ && \
-    rm -rf ./mongodb-linux-x86_64-ubuntu1804-4.2.15 && rm ./mongodb-linux-x86_64-ubuntu1804-4.2.15.tgz
+    tar -zxvf mongodb-linux-x86_64-ubuntu2004-4.4.8.tgz && \
+    mv ./mongodb-linux-x86_64-ubuntu2004-4.4.8/bin/* /usr/local/bin/ && \
+    rm -rf ./mongodb-linux-x86_64-ubuntu2004-4.4.8 && rm ./mongodb-linux-x86_64-ubuntu2004-4.4.8.tgz
 
 COPY ./init-mongodbs.sh ./init-replica.sh ./entry-point.sh /
 

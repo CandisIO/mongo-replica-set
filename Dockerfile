@@ -1,7 +1,7 @@
 FROM ubuntu:20.10 as base
 
 # MongoDB download URL
-ARG DB_URL=https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu2004-5.0.2.tgz
+ARG DB_URL=https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu2004-5.0.5.tgz
 
 RUN apt-get update && \
     apt-get upgrade -y && \

@@ -7,9 +7,9 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y curl && \
     curl -OL ${DB_URL} && \
-    tar -zxvf mongodb-linux-x86_64-ubuntu2004-5.0.2.tgz && \
-    mv ./mongodb-linux-x86_64-ubuntu2004-5.0.2/bin/* /usr/local/bin/ && \
-    rm -rf ./mongodb-linux-x86_64-ubuntu2004-5.0.2 && rm ./mongodb-linux-x86_64-ubuntu2004-5.0.2.tgz
+    tar -zxvf mongodb-linux-x86_64-ubuntu2004-5.0.5.tgz && \
+    mv ./mongodb-linux-x86_64-ubuntu2004-5.0.5/bin/* /usr/local/bin/ && \
+    rm -rf ./mongodb-linux-x86_64-ubuntu2004-5.0.5 && rm ./mongodb-linux-x86_64-ubuntu2004-5.0.5.tgz
 
 COPY ./init-mongodbs.sh ./init-replica.sh ./entry-point.sh /
 

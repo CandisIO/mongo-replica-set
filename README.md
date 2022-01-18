@@ -8,7 +8,7 @@ The key motivation for this image is to have a __ready-made__ replica set of Mon
 
 To run the container, execute the following command:
 ```shell
-docker run -d -p 27017:27017 -p 27018:27018 -p 27019:27019 candis/mongo-replica-set
+docker run -d -p 27017:27017 -p 27018:27018 -p 27019:27019 candeemis/mongo-replica-set
 ```
 
 Wait for 30 to 35 seconds in order to properly start all database instances and replica-set initialization.

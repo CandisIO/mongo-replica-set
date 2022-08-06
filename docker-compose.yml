@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  mongors:
+    container_name: mongors
+    build: .
+    ports:
+      - 27017:27017
+      - 27018:27018
+      - 27019:27019
+    restart: always

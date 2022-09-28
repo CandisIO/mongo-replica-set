@@ -16,7 +16,9 @@ Wait for 30 to 35 seconds in order to properly start all database instances and 
 
 ## Configuration
 
-Additionally, you can pass an env variable called `HOST` when running the container to configure the replica's hostname in docker. By default, it uses `localhost`.
+#### Host
+
+You can pass an env variable called `HOST` when running the container to configure the replica's hostname in docker. By default, it uses `localhost`.
 
 Once ready, the replica-set can be accessed using the following connection string:
 
@@ -29,4 +31,20 @@ If you're connecting from your host machine, you might need to set a new alias w
 ```
 # /etc/hosts
 127.0.0.1 HOST # where HOST is the value passed as env variable to the container
+```
+
+#### Startup Parameters
+You can also pass additional startup parameters to the mongod process by overriding the docker COMMAND.
+
+For example from docker-compose
+
+```
+mongo:
+  image: davybello/mongo-replica-set:5.0.2
+  command: "--setParameter transactionLifetimeLimitSeconds=3600"
+```
+Or from the command line like
+
+```
+docker run davybello/mongo-replica-set:5.0.2 --setParameter transactionLifetimeLimitSeconds=3600
 ```

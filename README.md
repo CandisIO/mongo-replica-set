@@ -44,11 +44,11 @@ For example from docker-compose
 
 ```
 mongo:
-  image: davybello/mongo-replica-set:5.0.2
+  image: davybello/mongo-replica-set:5.0.12
   command: "--setParameter transactionLifetimeLimitSeconds=3600"
 ```
 Or from the command line like
 
 ```
-docker run davybello/mongo-replica-set:5.0.2 --setParameter transactionLifetimeLimitSeconds=3600
+docker run davybello/mongo-replica-set:5.0.12 --setParameter transactionLifetimeLimitSeconds=3600
 ```

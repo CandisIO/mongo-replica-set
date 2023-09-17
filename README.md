@@ -1,5 +1,7 @@
 # MongoDB Replica Set
 
+### <p style="color:green">It is using latest build of image according to your running platform.<p>
+
 A Replica Set of MongoDB running in a Docker container
 
 To run the container, execute the following command:

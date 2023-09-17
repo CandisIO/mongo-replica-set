@@ -12,6 +12,12 @@ To run the container, execute the following command:
 docker run -d -p 27017:27017 -p 27018:27018 -p 27019:27019 candis/mongo-replica-set
 ```
 
+If you prefer, use Docker Compose instead:
+
+```shell
+docker-compose up -d
+```
+
 Wait for 30 to 35 seconds in order to properly start all database instances and replica-set initialization.
 
 ## Configuration

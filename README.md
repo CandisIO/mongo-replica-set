@@ -2,10 +2,6 @@
 
 A Replica Set of MongoDB running in a Docker container
 
-## Not For Production
-
-The key motivation for this image is to have a **ready-made** replica set of MongoDB running inside docker container for CI tests and local development.
-
 To run the container, execute the following command:
 
 ```shell

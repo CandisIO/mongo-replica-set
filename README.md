@@ -14,6 +14,19 @@ If you prefer, use Docker Compose instead:
 docker-compose up -d
 ```
 
+```yaml
+version: "3.8"
+
+services:
+  mongors:
+    image: elitale/mongo-cluster
+    ports:
+      - 27017:27017
+      - 27018:27018
+      - 27019:27019
+    restart: always
+```
+
 Wait for 30 to 35 seconds in order to properly start all database instances and replica-set initialization.
 
 ## Configuration

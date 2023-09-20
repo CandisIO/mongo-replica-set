@@ -1,15 +1,32 @@
 # MongoDB Replica Set
 
+### <p style="color:green">It is using latest build of image according to your running platform.<p>
+
 A Replica Set of MongoDB running in a Docker container
-
-## Not For Production
-
-The key motivation for this image is to have a **ready-made** replica set of MongoDB running inside docker container for CI tests and local development.
 
 To run the container, execute the following command:
 
 ```shell
 docker run -d -p 27017:27017 -p 27018:27018 -p 27019:27019 candis/mongo-replica-set
+```
+
+If you prefer, use Docker Compose instead:
+
+```shell
+docker-compose up -d
+```
+
+```yaml
+version: "3.8"
+
+services:
+  mongors:
+    image: elitale/mongo-cluster
+    ports:
+      - 27017:27017
+      - 27018:27018
+      - 27019:27019
+    restart: always
 ```
 
 Wait for 30 to 35 seconds in order to properly start all database instances and replica-set initialization.
